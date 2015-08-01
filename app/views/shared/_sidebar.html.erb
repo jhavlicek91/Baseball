@@ -1,0 +1,11 @@
+<!-- app/views/shared/_sidebar.html.erb -->
+<ul class="nav nav-stacked fixed sports-sidebar" id="sidebar">
+    <li>
+		<% @sports.each do |sport| %>
+        	<div><%= sport.name %></div>	    	
+	    	<ul class="nav nav-stacked" >
+		        <li><a href="#">Sub</a></li>
+	        </ul>
+		<% end %>
+    </li>
+</ul>

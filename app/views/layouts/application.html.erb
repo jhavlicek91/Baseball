@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Baseball</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+	<head>
+	  <title>Baseball</title>
+	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body>
+		<%= render 'shared/navigation' %>
+		<div class="main-container container">
+			<div class="row">
+			  <div class="col-xs-3">
+			    <%= render :partial => "shared/sidebar", :locals => { sports: @sports } %>
+			  </div>  
+			  <div class="col-xs-9">
+			  		<%= yield %>
+			    </div>
+			  </div>
+			</div>
+		</div>
+	</body>
 </html>
