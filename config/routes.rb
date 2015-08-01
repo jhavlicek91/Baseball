@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'teams/index'
+
   get 'main/index'
 
 root 'main#index'
