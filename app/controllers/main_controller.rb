@@ -1,6 +1,6 @@
 class MainController < ApplicationController
   def index
-  	@sports = Sport.all
+	  	@leagues = League.all
   end
 
 end

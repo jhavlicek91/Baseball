@@ -10,10 +10,10 @@
 		<%= render 'shared/navigation' %>
 		<div class="main-container container">
 			<div class="row">
-			  <div class="col-xs-3">
-			    <%= render :partial => "shared/sidebar", :locals => { sports: @sports } %>
-			  </div>  
-			  <div class="col-xs-9">
+			  <div class="col-xs-2" style="border-right: 1px solid silver;">
+			    <%= render :partial => "shared/sidebar", :locals => { leagues: @leagues} %>
+			  </div> 
+			  <div class="col-xs-10">
 			  		<%= yield %>
 			    </div>
 			  </div>

@@ -2,11 +2,8 @@
 
 <ul class="nav nav-stacked fixed sports-sidebar" id="sidebar">
     <li>
-		<% @sports.each do |sport| %>
-        	<div><%= sport.name %></div>	    	
-	    	<ul class="nav nav-stacked" >
-		        <li><a href="#">Sub</a></li>
-	        </ul>
+		<% @leagues.each do |league| %>
+        	<div class="league"><%= league.abbreviation %> <%= league.sport.name %></div>	    	
 		<% end %>
     </li>
 </ul>

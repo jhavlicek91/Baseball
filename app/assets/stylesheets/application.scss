@@ -4,14 +4,26 @@
 
 .main-container{
 	width: 1200px;
+
+	.container{
+		width: 90%;
+	}
 }
 
 /* all links */
-.sports-sidebar .nav>li>a {
-    color: #999;
-    padding: 4px 20px;
-    font-size: 13px;
-    font-weight: 400;
+.sports-sidebar {
+
+	.nav>li>a {
+	    color: #999;
+	    padding: 4px 20px;
+	    font-size: 13px;
+	    font-weight: 400;
+    }
+
+    .league{
+    	margin-bottom: 20px;
+    	font-size: 15px;
+    }
 }
 
 /* nested links */

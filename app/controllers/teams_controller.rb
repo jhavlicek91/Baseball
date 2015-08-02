@@ -2,7 +2,7 @@ class TeamsController < ApplicationController
 	include FeedHelper
 
   def index
-  	  	@sports = Sport.all
+  	  	@leagues = League.all
   	  	@team = Team.find(params[:id])
   	  	@image_url = (@team.name.downcase.gsub(' ', '_')) + '_big.png'
   end
