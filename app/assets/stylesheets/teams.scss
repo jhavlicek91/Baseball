@@ -1,3 +1,28 @@
-// Place all the styles related to the Teams controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.news-container{
+    margin: 15px 30px 15px 30px;
+
+	.news-item.panel{
+		width: 750px;
+		margin-bottom: 30px;	
+
+		.panel-body{
+			font-weight: bold;
+			padding: 10px 15px 10px 15px;
+
+			.fa{
+				float: right;
+				color: white;
+				cursor: pointer;
+
+				&:hover{
+					text-transform: none;
+				}
+			}
+		}
+
+		.panel-footer{
+			background-color: white;
+		}
+	}
+}
+
