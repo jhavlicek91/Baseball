@@ -6,7 +6,8 @@ class CreateTeams < ActiveRecord::Migration
       t.references :division, index: true, foreign_key: true
       t.references :city, index: true, foreign_key: true
 
-      t.timestamps null: false
+      t.string :primaryColor
+      t.string :secondaryColor
     end
   end
 end
