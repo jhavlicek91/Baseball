@@ -67,6 +67,7 @@ ActiveRecord::Schema.define(version: 20150731043935) do
     t.integer "city_id"
     t.string  "primaryColor"
     t.string  "secondaryColor"
+    t.string  "rssFeedID"
   end
 
   add_index "teams", ["city_id"], name: "index_teams_on_city_id"
