@@ -5,8 +5,6 @@ class CreateLeagues < ActiveRecord::Migration
       t.string :abbreviation
       
       t.references :sport, index: true, foreign_key: true
-
-      t.timestamps null: false
     end
   end
 end
