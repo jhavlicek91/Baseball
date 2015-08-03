@@ -7,10 +7,7 @@ class TeamsController < ApplicationController
   end
 
   def getTeamNews
-    	entries = FeedHelper.getMLBTeamFeed(params[:feedId])
-
-    	#todo: imit to last 10
-    	render :json => { :entries => entries }
+    	render :json => { :entries => FeedHelper.getMLBTeamFeed(params[:feedId]) }
   end  
 
   def getTeamsForSideBar
