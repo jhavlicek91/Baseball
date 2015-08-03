@@ -134,7 +134,7 @@ City.create(name: 'Minnesota', state_id: 24)
 City.create(name: 'Cleveland', state_id: 36)
 
 City.create(name: 'Philladelphia', state_id: 39)
-City.create(name: 'Washington D.C.', state_id: 9)
+City.create(name: 'Washington', state_id: 9)
 City.create(name: 'Miami', state_id: 10)
 City.create(name: 'Atlanta', state_id: 11)
 
