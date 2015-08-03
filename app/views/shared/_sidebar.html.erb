@@ -1,9 +1,14 @@
-<!-- app/views/shared/_sidebar.html.erb -->
-
 <ul class="nav nav-stacked fixed sports-sidebar" id="sidebar">
-    <li>
-		<% @leagues.each do |league| %>
-        	<div class="league"><%= league.abbreviation %> <%= league.sport.name %></div>	    	
-		<% end %>
-    </li>
+    <li class="sidebar-leagues" >
+    	<div class="league closed" data-id="1">NFL Football</div>
+    	<div class="league closed" data-id="2">MLB Baseball</div>
+    	<div class="league closed" data-id="3">NBA Basketball</div>
+    	<div class="league closed" data-id="4">NHL Hockey</div>    	    	    	
+	</li>
 </ul>
+
+<script type="text/javascript">
+	$('document').ready(function() {		
+		sidebar();
+	});
+</script>

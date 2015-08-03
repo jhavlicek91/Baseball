@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get 'teams/index'
-
   get 'main/index'
 
+  get 'teams/index'
   get 'teams/getTeamNews'
+  get 'teams/getTeamsForSideBar'
 
 root 'main#index'
 

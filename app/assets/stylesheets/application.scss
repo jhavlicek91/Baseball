@@ -10,9 +10,7 @@
 	}
 }
 
-/* all links */
 .sports-sidebar {
-
 	.nav>li>a {
 	    color: #999;
 	    padding: 4px 20px;
@@ -23,13 +21,43 @@
     .league{
     	margin-bottom: 20px;
     	font-size: 15px;
+    	cursor: pointer;
     }
 }
 
-/* nested links */
-.sports-sidebar .nav .nav>li>a {
-    padding-top: 1px;
-    padding-bottom: 1px;
-    padding-left: 30px;
-    font-size: 12px;
+#league-popup{
+	position: absolute;
+	display: none;
+	padding: 15px;
+	max-width: 700px;
+
+	border-radius: 0;
+
+	.conference-container{
+		margin-bottom: 20px;
+
+		.division-container{
+			width: 200px;
+			.division{
+				font-weight: bold;
+				margin-bottom: 10px;
+			}
+
+			margin-right: 25px;
+
+			.team{
+				color: black;
+				text-decoration: none;
+				margin-bottom: 5px;
+				
+				img{
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+
+	.conference-container:last-child{
+		margin-bottom: 0;
+	}
 }
