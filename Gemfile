@@ -19,6 +19,7 @@ gem 'bootstrap-sass', '~> 3.3.5'
 gem 'nokogiri'
 gem 'watir-webdriver'
 gem 'feedjira' 
+gem 'rufus-scheduler'
 
 gem 'autoprefixer-rails'
 
