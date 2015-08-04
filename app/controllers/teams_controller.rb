@@ -4,6 +4,7 @@ class TeamsController < ApplicationController
 
   def index
   	  	@team = Team.find(params[:id])
+
   	  	@image_url = (@team.name.downcase.gsub(' ', '_')) + '_big.png'
   end
 
@@ -27,7 +28,6 @@ class TeamsController < ApplicationController
   end
 
   def getTeamRankings
-    ##return NokogiriHelper.getBasicTeamInfo(params[:theScoreId]}, params[:league]})
-    render :json => { :info => NokogiriHelper.getBasicTeamInfo(params[:theScoreId], 'mlb') }
+    render :json => { :info => NokogiriHelper.getBasicTeamInfo(params[:theScoreId], params[:league]) }
   end
 end 

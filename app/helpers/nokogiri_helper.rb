@@ -29,7 +29,7 @@ module NokogiriHelper
 
 	private 
 		def self.GetTeamPageUrl(theScoreId, league)
-			return "http://www.thescore.com/mlb/teams/17/news"
+			return "http://www.thescore.com/#{league}/teams/#{theScoreId}/news" 
 		end
 
 		def self.GetPageContent(url)

@@ -44,7 +44,7 @@ var teamPage = function(teamPageVars){
 			url: 'getTeamRankings',
 			data: {
 				theScoreId: teamPageVars.theScoreId,
-				league: 'mlb'
+				league: teamPageVars.league.toLowerCase()
 			},
 			success: function(data){
 				updatePageWithRankings(data.info);
