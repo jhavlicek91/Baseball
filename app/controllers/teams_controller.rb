@@ -1,5 +1,6 @@
 class TeamsController < ApplicationController
 	include FeedHelper
+  include NokogiriHelper
 
   def index
   	  	@team = Team.find(params[:id])
@@ -23,5 +24,10 @@ class TeamsController < ApplicationController
       .select("teams.id, teams.name, cities.name as cityName, teams.division_id") 
 
     render :json => { :divisions => divisions, :teams => teams }
+  end
+
+  def getTeamRankings
+    ##return NokogiriHelper.getBasicTeamInfo(params[:theScoreId]}, params[:league]})
+    render :json => { :info => NokogiriHelper.getBasicTeamInfo(params[:theScoreId], 'mlb') }
   end
 end 

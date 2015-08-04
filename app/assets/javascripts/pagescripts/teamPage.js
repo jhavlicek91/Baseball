@@ -20,6 +20,13 @@ var teamPage = function(teamPageVars){
 		$('.news-container').html(panels.join(' '));
 	}
 
+	var updatePageWithRankings = function(info){
+		$('.division-place').prepend(info.division_place + " in ");
+		$('.record').text(info.record);
+		$('.last-ten').text(info.last_ten);
+		$('.streak').text(info.streak)
+	}
+
 	var getFeedData = function(){
 		$.ajax({
 			url: 'getTeamNews',
@@ -32,8 +39,22 @@ var teamPage = function(teamPageVars){
 		});		
 	}
 
+	var getTeamRankings = function(){
+		$.ajax({
+			url: 'getTeamRankings',
+			data: {
+				theScoreId: teamPageVars.theScoreId,
+				league: 'mlb'
+			},
+			success: function(data){
+				updatePageWithRankings(data.info);
+			}
+		});			
+	}
+
 	var initialize = function(){
 		getFeedData();
+		getTeamRankings();
 	}
 
 	initialize();

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'teams/index'
   get 'teams/getTeamNews'
   get 'teams/getTeamsForSideBar'
+  get 'teams/getTeamRankings'
 
 root 'main#index'
 

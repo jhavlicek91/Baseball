@@ -1,4 +1,4 @@
-##require 'feedjira'
+require 'feedjira'
 
 module FeedHelper
 
