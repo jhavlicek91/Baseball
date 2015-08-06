@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150731043935) do
+ActiveRecord::Schema.define(version: 20150805235744) do
 
   create_table "cities", force: :cascade do |t|
     t.string  "name",     null: false
@@ -48,6 +48,24 @@ ActiveRecord::Schema.define(version: 20150731043935) do
 
   add_index "leagues", ["sport_id"], name: "index_leagues_on_sport_id"
 
+  create_table "players", force: :cascade do |t|
+    t.string  "name",        null: false
+    t.integer "number"
+    t.integer "team_id"
+    t.integer "position_id"
+  end
+
+  add_index "players", ["position_id"], name: "index_players_on_position_id"
+  add_index "players", ["team_id"], name: "index_players_on_team_id"
+
+  create_table "positions", force: :cascade do |t|
+    t.string  "name",         null: false
+    t.string  "abbreviation"
+    t.integer "sport_id"
+  end
+
+  add_index "positions", ["sport_id"], name: "index_positions_on_sport_id"
+
   create_table "sports", force: :cascade do |t|
     t.string "name", null: false
   end
@@ -69,6 +87,10 @@ ActiveRecord::Schema.define(version: 20150731043935) do
     t.string  "secondaryColor"
     t.string  "rssFeedID"
     t.string  "theScoreID"
+    t.string  "place"
+    t.string  "streak"
+    t.string  "last_ten"
+    t.string  "team_record"
   end
 
   add_index "teams", ["city_id"], name: "index_teams_on_city_id"

@@ -154,3 +154,13 @@ City.create(name: 'Colorado', state_id: 6)
 City.create(name: 'San Francisco', state_id: 5)
 City.create(name: 'San Diego', state_id: 5)
 
+Position.create(name: 'Pitcher', abbreviation: 'P', sport_id: 1)
+Position.create(name: 'Catcher', abbreviation: 'C', sport_id: 1)
+Position.create(name: 'First Base', abbreviation: '1B', sport_id: 1)
+Position.create(name: 'Second Base', abbreviation: '2B', sport_id: 1)
+Position.create(name: 'Third Base', abbreviation: '3B', sport_id: 1)
+Position.create(name: 'Short Stop', abbreviation: 'SS', sport_id: 1)
+Position.create(name: 'Left Field', abbreviation: 'LF', sport_id: 1)
+Position.create(name: 'Center Field', abbreviation: 'CF', sport_id: 1)
+Position.create(name: 'Right Field', abbreviation: 'RF', sport_id: 1)
+
