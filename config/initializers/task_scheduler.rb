@@ -1,8 +1,13 @@
 require 'rufus-scheduler'
+require 'ScrapingJob'
 
 scheduler = Rufus::Scheduler.new
 
-scheduler.every("30s") do
-	puts "did something"
-end
+##run every day at 5am
+scheduler.cron '00 5 * * *', :first_in => '5s' do
+	puts "start updating all teams"
 
+	ScrapingJob.Run
+
+	puts "finished updating all teams"
+end

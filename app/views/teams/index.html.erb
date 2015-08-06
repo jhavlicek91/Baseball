@@ -6,21 +6,21 @@
 		<div class="col-md-4">
 			<h2><%= @team.city.name + " " + @team.name %></h2>
 			<div class="division-place">
-				<%= @team.division.conference.abbreviation + " " + @team.division.name%>
+				<%= @team.place + " in " + @team.division.conference.abbreviation + " " + @team.division.name %>
 			</div>
 		</div>
 		<div class="col-md-6" style="margin-top: 35px">
 			<div class="container">
 				<div class="col-md-4 pull-left">
-					<div class="record"></div>
+					<div class="record"><%= @team.team_record %></div>
 					<div class="team-recent-info">Record</div>
 				</div>
 				<div class="col-md-4 pull-left">
-					<div class="last-ten"></div>
+					<div class="last-ten"><%= @team.last_ten %></div>
 					<div class="team-recent-info">Last Ten</div>
 				</div>
 				<div class="col-md-4 pull-left">
-					<div class="streak"></div>
+					<div class="streak"><%= @team.streak %></div>
 					<div class="team-recent-info">Streak</div>
 				</div>											
 			</div>

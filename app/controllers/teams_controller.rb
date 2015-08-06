@@ -26,8 +26,4 @@ class TeamsController < ApplicationController
 
     render :json => { :divisions => divisions, :teams => teams }
   end
-
-  def getTeamRankings
-    render :json => { :info => NokogiriHelper.getBasicTeamInfo(params[:theScoreId], params[:league]) }
-  end
 end 

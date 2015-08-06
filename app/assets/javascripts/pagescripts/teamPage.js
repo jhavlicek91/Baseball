@@ -39,22 +39,8 @@ var teamPage = function(teamPageVars){
 		});		
 	}
 
-	var getTeamRankings = function(){
-		$.ajax({
-			url: 'getTeamRankings',
-			data: {
-				theScoreId: teamPageVars.theScoreId,
-				league: teamPageVars.league.toLowerCase()
-			},
-			success: function(data){
-				updatePageWithRankings(data.info);
-			}
-		});			
-	}
-
 	var initialize = function(){
 		getFeedData();
-		getTeamRankings();
 	}
 
 	initialize();
