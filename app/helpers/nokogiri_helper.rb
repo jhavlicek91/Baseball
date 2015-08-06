@@ -4,7 +4,6 @@ require 'open-uri'
 require 'watir-webdriver'
 
 module NokogiriHelper
-
 	class BasicTeamInfo
 		attr_accessor :record, :division_place, :last_ten, :streak 
 
@@ -18,24 +17,11 @@ module NokogiriHelper
 
 	def self.getBasicTeamInfo(theScoreId, league)
 		url  = GetTeamPageUrl(theScoreId, league)
-		page =  GetPageContent(url)
 
-		return BasicTeamInfo.new(page)
-	end
 
-	def getBasicTeamInfo(theScoreId, league)
-		return
 	end
 
 	private 
 		def self.GetTeamPageUrl(theScoreId, league)
-			return "http://www.thescore.com/#{league}/teams/#{theScoreId}/news" 
-		end
-
-		def self.GetPageContent(url)
-			b = Watir::Browser.new :phantomjs
-			b.goto url
-			page = Nokogiri::HTML(b.html)
-			return page
 		end
 end
