@@ -49,13 +49,21 @@ ActiveRecord::Schema.define(version: 20150805235744) do
   add_index "leagues", ["sport_id"], name: "index_leagues_on_sport_id"
 
   create_table "players", force: :cascade do |t|
-    t.string  "name",        null: false
+    t.string  "name"
     t.integer "number"
+    t.integer "theScoreId"
     t.integer "team_id"
     t.integer "position_id"
+    t.string  "height"
+    t.string  "weight"
+    t.date    "birthdate"
+    t.integer "sport_id"
+    t.integer "birth_city_id"
   end
 
+  add_index "players", ["birth_city_id"], name: "index_players_on_birth_city_id"
   add_index "players", ["position_id"], name: "index_players_on_position_id"
+  add_index "players", ["sport_id", "theScoreId"], name: "index_players_on_sport_id_and_theScoreId", unique: true
   add_index "players", ["team_id"], name: "index_players_on_team_id"
 
   create_table "positions", force: :cascade do |t|
