@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150805235744) do
+ActiveRecord::Schema.define(version: 20150807005428) do
 
   create_table "cities", force: :cascade do |t|
     t.string  "name",     null: false
@@ -48,6 +48,15 @@ ActiveRecord::Schema.define(version: 20150805235744) do
 
   add_index "leagues", ["sport_id"], name: "index_leagues_on_sport_id"
 
+  create_table "player_stats", force: :cascade do |t|
+    t.integer "player_id"
+    t.integer "stat_type_id"
+    t.string  "value"
+  end
+
+  add_index "player_stats", ["player_id"], name: "index_player_stats_on_player_id"
+  add_index "player_stats", ["stat_type_id"], name: "index_player_stats_on_stat_type_id"
+
   create_table "players", force: :cascade do |t|
     t.string  "name"
     t.integer "number"
@@ -77,6 +86,20 @@ ActiveRecord::Schema.define(version: 20150805235744) do
   create_table "sports", force: :cascade do |t|
     t.string "name", null: false
   end
+
+  create_table "stat_classifications", force: :cascade do |t|
+    t.string  "name"
+    t.integer "sport_id"
+  end
+
+  add_index "stat_classifications", ["sport_id"], name: "index_stat_classifications_on_sport_id"
+
+  create_table "stat_types", force: :cascade do |t|
+    t.string  "name"
+    t.integer "stat_classification_id"
+  end
+
+  add_index "stat_types", ["stat_classification_id"], name: "index_stat_types_on_stat_classification_id"
 
   create_table "states", force: :cascade do |t|
     t.string  "name",         null: false

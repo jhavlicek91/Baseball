@@ -3,7 +3,6 @@ Sport.create(name: 'Basketball')
 Sport.create(name: 'Football')
 Sport.create(name: 'Hockey')
 
-
 League.create(name: 'National Football League', abbreviation: 'NFL', sport_id: 3)
 League.create(name: 'Major League Baseball', abbreviation: 'MLB', sport_id: 1)
 League.create(name: 'National Basketball Association', abbreviation: 'NBA', sport_id: 2)
@@ -163,4 +162,23 @@ Position.create(name: 'Short Stop', abbreviation: 'SS', sport_id: 1)
 Position.create(name: 'Left Field', abbreviation: 'LF', sport_id: 1)
 Position.create(name: 'Center Field', abbreviation: 'CF', sport_id: 1)
 Position.create(name: 'Right Field', abbreviation: 'RF', sport_id: 1)
+
+StatClassification.create(name: 'Hitting', sport_id: 1)
+StatClassification.create(name: 'Pitching', sport_id: 1)
+StatClassification.create(name: 'Basketball Offense', sport_id: 1)
+StatClassification.create(name: 'Hockey Offense', sport_id: 1)
+StatClassification.create(name: 'Goaltending', sport_id: 1)
+
+StatType.create(name: 'Avg.', stat_classification_id: 1)
+StatType.create(name: 'HR', stat_classification_id: 1)
+StatType.create(name: 'RBI', stat_classification_id: 1) 
+StatType.create(name: 'R', stat_classification_id: 1)
+StatType.create(name: 'SB', stat_classification_id: 1)
+
+StatType.create(name: 'W', stat_classification_id: 2)
+StatType.create(name: 'L', stat_classification_id: 2)
+StatType.create(name: 'ERA', stat_classification_id: 2)
+StatType.create(name: 'WHIP', stat_classification_id: 2)
+StatType.create(name: 'BB', stat_classification_id: 2)
+StatType.create(name: 'K', stat_classification_id: 2)
 
