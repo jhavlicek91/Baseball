@@ -1,6 +1,18 @@
 require 'feedjira'
 
 module FeedHelper
+	def self.getMLBTeamFeed(team)
+	    url = "http://mlb.mlb.com/partnerxml/gen/news/rss/#{team}.xml"
+     	feed = Feedjira::Feed.fetch_and_parse url
+
+     	parsedEntries = feed.entries.map do |entry|
+ 			TeamFeed.new entry
+     	end
+
+     	return parsedEntries	
+	end
+
+	private 
 
 	class TeamFeed
 		attr_accessor :title, :date, :content, :url
@@ -11,21 +23,6 @@ module FeedHelper
 			self.content = feed.content
 			self.url = feed.url
 		end
-	end
-
-	def self.getMLBTeamFeed(team)
-	    url = "http://mlb.mlb.com/partnerxml/gen/news/rss/" + team + ".xml"
-     	feed = Feedjira::Feed.fetch_and_parse url
-
-     	parsedEntries = feed.entries.map do |entry|
- 			TeamFeed.new entry
-     	end
-
-     	return parsedEntries	
-	end
-
-	def getMLBTeamFeed(team)
-		return 
-	end
+	end	
 
 end
