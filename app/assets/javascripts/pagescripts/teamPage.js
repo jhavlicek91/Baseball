@@ -31,7 +31,7 @@ var teamPage = function(teamPageVars){
 		$.ajax({
 			url: 'getTeamNews',
 			data: {
-				feedId: teamPageVars.rssFeedID
+				feedId: teamPageVars.rssFeedId
 			},
 			success: function(data){
 				buildNewsSection(data.entries);

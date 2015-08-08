@@ -9,8 +9,8 @@ class CreateTeams < ActiveRecord::Migration
       t.string :primaryColor
       t.string :secondaryColor
 
-      t.string :rssFeedID
-      t.string :theScoreID
+      t.string :rssFeedId
+      t.string :theScoreId
     end
   end
 end
