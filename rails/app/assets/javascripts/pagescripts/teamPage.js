@@ -1,6 +1,6 @@
 var teamPage = function(teamPageVars){
 	
-	var buildNewsSection = function(newsItems){
+	var _buildNewsSection = function(newsItems){
 		var panels = [];
 
 		$.each(newsItems, function(){
@@ -20,27 +20,36 @@ var teamPage = function(teamPageVars){
 		$('.news-container').html(panels.join(' '));
 	}
 
-	var updatePageWithRankings = function(info){
-		$('.division-place').prepend(info.division_place + " in ");
-		$('.record').text(info.record);
-		$('.last-ten').text(info.last_ten);
-		$('.streak').text(info.streak)
-	}
-
-	var getFeedData = function(){
+	var _getFeedData = function(){
 		$.ajax({
 			url: 'getTeamNews',
 			data: {
 				feedId: teamPageVars.rssFeedId
 			},
 			success: function(data){
-				buildNewsSection(data.entries);
+				_buildNewsSection(data.entries);
 			}
 		});		
 	}
 
+	var _getRosterData = function(){
+		$.ajax({
+			url: 'getTeamNews',
+			data: {
+				feedId: teamPageVars.rssFeedId
+			},
+			success: function(data){
+				_buildNewsSection(data.entries);
+			}
+		});		
+	}
+
+	var _buildRosterSection = function(){
+		
+	}
+
 	var initialize = function(){
-		getFeedData();
+		_getFeedData();
 	}
 
 	initialize();
