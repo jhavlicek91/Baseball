@@ -20,6 +20,7 @@ Router.map(function() {
 
   this.route('league', { path: '/:league_id' })
 
+  this.route('catchall', {path: '/*wildcard'})
 });
 
 export default Router;
