@@ -1,3 +1,15 @@
-<h2 id="title">Welcome to Ember</h2>
-
-{{outlet}}
+<div class="main-container container">
+	<nav class="navbar navbar-default" role="navigation">
+	  <div class="container">
+	    <div class="navbar-header">
+	      <div class="navbar-brand">Sports</div>
+	    </div>
+	  </div>
+	</nav>
+	<div class="row">
+	  	{{#side-bar}}{{/side-bar}}
+	  <div class="col-xs-10 main-content">
+	  	{{outlet}}
+	  </div>
+	</div>
+</div>
