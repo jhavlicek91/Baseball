@@ -20,9 +20,9 @@ Router.map(function() {
   this.route('players', { path: '/:league_id/players' } );
   this.route('teams', { path: '/:league_id/players' } );
 
-  this.route('league', { path: '/:league_id' })
+  this.route('league', { path: '/:league_id' });
 
-  this.route('catchall', {path: '/*wildcard'})
+  this.route('catchall', {path: '/*wildcard'});
 });
 
 export default Router;

@@ -1,3 +1,6 @@
+import Ember from 'ember';
+
 export default Ember.Component.extend({
-  classNames: ['col-xs-2']
+  classNames: ['col-xs-2'],
+  
 });
