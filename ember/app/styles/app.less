@@ -5,62 +5,62 @@
 		width: 90%;
 	}
 
-	.sidebar-content{
+	#sidebar{
 		border-right: 1px solid silver;
+		
+		.nav > li > .league {
+		    color: #999;
+		    padding: 4px 20px;
+		    font-size: 13px;
+		    font-weight: 400;
+	    }
 
-		.sports-sidebar {
-			.nav >li > .league {
-			    color: #999;
-			    padding: 4px 20px;
-			    font-size: 13px;
-			    font-weight: 400;
-		    }
+	    .league{
+	    	margin-bottom: 20px;
+	    	font-size: 15px;
+	    	cursor: pointer;
+	    }	
+	}	
 
-		    .league{
-		    	margin-bottom: 20px;
-		    	font-size: 15px;
-		    	cursor: pointer;
-		    }
-		}		
+	.team-header-info{
+		.record, .last-ten, .streak, .team-recent-info{
+			text-align: center;
+		}
+
+		.team-recent-info{
+			font-size: 17px;
+			font-weight: bold;
+			color: gray;
+		}
+	}
+
+	.news-container{
+	    margin: 15px 30px 15px 30px;
+
+		.news-item.panel{
+			width: 750px;
+			margin-bottom: 30px;	
+
+			.panel-body{
+				font-weight: bold;
+				padding: 10px 15px 10px 15px;
+
+				.fa{
+					float: right;
+					color: white;
+					cursor: pointer;
+
+					&:hover{
+						text-transform: none;
+					}
+				}
+			}
+
+			.panel-footer{
+				background-color: white;
+			}
+		}
 	}	
 }
 
-.team-header-info{
-	.record, .last-ten, .streak, .team-recent-info{
-		text-align: center;
-	}
 
-	.team-recent-info{
-		font-size: 17px;
-		font-weight: bold;
-		color: gray;
-	}
-}
-
-.news-container{
-    margin: 15px 30px 15px 30px;
-
-	.news-item.panel{
-		width: 750px;
-		margin-bottom: 30px;	
-
-		.panel-body{
-			font-weight: bold;
-			padding: 10px 15px 10px 15px;
-
-			.fa{
-				float: right;
-				color: white;
-				cursor: pointer;
-
-				&:hover{
-					text-transform: none;
-				}
-			}
-		}
-
-		.panel-footer{
-			background-color: white;
-		}
-	}
-}
