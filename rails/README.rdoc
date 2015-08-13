@@ -1,5 +1,0 @@
-== README
-
-This project contains a rails web app that visualizes some information for sports teams from different leagues
-
-Data is retrieved by parsing rss feeds and scraping websites
