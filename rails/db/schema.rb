@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150807005428) do
+ActiveRecord::Schema.define(version: 20150812045821) do
 
   create_table "cities", force: :cascade do |t|
     t.string  "name",     null: false
@@ -114,10 +114,10 @@ ActiveRecord::Schema.define(version: 20150807005428) do
     t.string  "name_abbreviation"
     t.integer "division_id"
     t.integer "city_id"
-    t.string  "primaryColor"
-    t.string  "secondaryColor"
-    t.string  "rssFeedId"
-    t.string  "theScoreId"
+    t.string  "primary_color"
+    t.string  "secondary_color"
+    t.string  "rss_feed_id"
+    t.string  "thescore_id"
     t.string  "place"
     t.string  "streak"
     t.string  "last_ten"
