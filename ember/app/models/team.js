@@ -16,5 +16,13 @@ export default  DS.Model.extend({
 
   fullName: Ember.computed('city', 'name', function(){
     return this.get('city').get('name') + " " + this.get('name');
+  }),
+
+  largeImageURL: Ember.computed('name', function(){
+  	return 'assets/images/' + this.get('name').toLowerCase() + '_big.png';
+  }),
+
+  smallImageURL: Ember.computed('name', function(){
+  	return 'assets/images/' + this.get('name').toLowerCase() + '_small.png';
   })
 });
