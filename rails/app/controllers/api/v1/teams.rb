@@ -11,10 +11,15 @@ module API
         end
 
         get ":id", root: "team" do
-          Team
+          team = Team
             .joins(:city, division: :conference)
             .where(id: params[:id])
             .first
+
+            { :team => team, 
+              :divisions => [team.division], 
+              :conferences => [team.division.conference], 
+              :cities => [team.city] }
         end
       end
 

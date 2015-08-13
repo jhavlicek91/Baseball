@@ -1,4 +1,30 @@
-<div>Leage: {{model.league_id}}</div>
-<div>Team Id: {{model.team_id}}</div>
+<div class="container">
+	<div class="row team-header-info">
+		<div class="col-md-2"></div>
+		<div class="col-md-4">
+			<h2><{{ model.fullName}}</h2>
+			<div class="division-place">
+				{{ model.place }} in {{ model.division.fullName }}
+			</div>
+		</div>
+		<div class="col-md-6" style="margin-top: 35px">
+			<div class="container">
+				<div class="col-md-4 pull-left">
+					<div class="record">{{ model.teamRecord }}</div>
+					<div class="team-recent-info">Record</div>
+				</div>
+				<div class="col-md-4 pull-left">
+					<div class="last-ten"><{{ model.lastTen }}</div>
+					<div class="team-recent-info">Last Ten</div>
+				</div>
+				<div class="col-md-4 pull-left">
+					<div class="streak">{{ model.streak }}</div>
+					<div class="team-recent-info">Streak</div>
+				</div>											
+			</div>
+		</div>
+	</div>
+	<h3>News</h3>
 
+</div>
 {{outlet}}
