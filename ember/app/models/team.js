@@ -13,6 +13,7 @@ export default  DS.Model.extend({
 
   division: DS.belongsTo('division', { async: false }),
   city: DS.belongsTo('city', { async: false }),
+  players: DS.hasMany('player', { async: true }),
 
   fullName: Ember.computed('city', 'name', function(){
     return this.get('city').get('name') + " " + this.get('name');

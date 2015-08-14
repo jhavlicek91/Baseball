@@ -4,6 +4,6 @@ export default  DS.Model.extend({
   name: DS.attr('string'),
   abbreviation: DS.attr('string'),
 
-  divisions: DS.hasMany('division'),
-  league: DS.belongsTo('league', { async: false })
+  players: DS.hasMany('player'),
+  sport: DS.belongsTo('sport')
 });
