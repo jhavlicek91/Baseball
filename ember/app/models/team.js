@@ -19,10 +19,10 @@ export default  DS.Model.extend({
   }),
 
   largeImageURL: Ember.computed('name', function(){
-  	return 'assets/images/' + this.get('name').toLowerCase() + '_big.png';
+  	return 'assets/images/' + this.get('name').replace(' ', '_').toLowerCase() + '_big.png';
   }),
 
   smallImageURL: Ember.computed('name', function(){
-  	return 'assets/images/' + this.get('name').toLowerCase() + '_small.png';
+  	return 'assets/images/' + this.get('name').replace(' ', '_').toLowerCase() + '_small.png';
   })
 });
