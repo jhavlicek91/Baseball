@@ -1,0 +1,13 @@
+<div class="position-section container">
+<div class="row position">{{position.name}}</div>
+	{{#each position.players as |player|}}
+		<div class="row player">
+			<div class="col-md-4">
+				{{#link-to 'player' player.team.division.conference.league.abbreviation player.id}}{{player.name}}{{/link-to}}
+			</div>
+			<div class="col-md-2">{{player.height}}</div>
+			<div class="col-md-2">{{player.weight}}</div>
+			<div class="col-md-1">{{player.number}}</div>
+		</div>
+	{{/each}}
+</div>

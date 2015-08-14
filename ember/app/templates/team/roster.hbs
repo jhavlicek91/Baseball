@@ -1,1 +1,6 @@
-<div>Roster Here</div>
+<div class="team-roster">
+  <h3>Roster</h3>
+  {{#team-roster positions=model.positions as |position|}}
+	{{position-section position=position}}
+  {{/team-roster}}
+</div>
