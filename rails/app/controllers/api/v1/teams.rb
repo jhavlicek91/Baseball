@@ -7,19 +7,20 @@ module API
         desc "Return a team"
 
         params do
-          requires :id, type: Integer, desc: "ID of the contact"
+          requires :id, type: Integer, desc: "ID of the team"
         end
 
         get ":id", root: "team" do
           team = Team
-            .joins(:city, division: :conference)
+            .joins(:city, division: {conference: :league} )
             .where(id: params[:id])
             .first
 
             { :team => team, 
               :divisions => [team.division], 
               :conferences => [team.division.conference], 
-              :cities => [team.city] }
+              :cities => [team.city],
+              :leagues => [team.division.conference.league] }
         end
       end
 
